@@ -1,0 +1,23 @@
+@mixin d-flex( $flex-direction, $justify-content, $align-items ) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin w-h( $width, $height ) {
+    width: $width;
+    height: $height;
+}
+
+@mixin d-grid__repeart( $repeart, $columns, $row ) {
+    display: grid;
+    grid-template-columns: repeat( $repeart, $columns );
+    grid-template-rows: $row;
+}
+
+@mixin d-grid( $column1, $column2, $row ) {
+    display: grid;
+    grid-template-columns: $column1, $column2;
+    grid-template-rows: $row;
+}
