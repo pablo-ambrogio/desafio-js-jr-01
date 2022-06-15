@@ -109,15 +109,43 @@
     @include mx.d-flex( row, space-between, center );
     position: relative;
     z-index: 3;
+    
+    @include bp.breakpoint( ms ) {
+        width: 90%;
+    }
+
+    &-picture {
+        @include bp.breakpoint( ms ) {
+            width: 40%;
+        }
+
+        &__img {
+            @include mx.w-h( 100%, auto );
+
+            @include bp.breakpoint( ms ) {
+                width: 90%;
+            }
+        }
+    }
 
     &__links {
         display: flex;
         column-gap: 2rem;
+
+        @include bp.breakpoint( ms ) {
+            @include mx.w-h( 60%, auto );
+            column-gap: .9rem;
+            justify-content: flex-end;
+        }
     }
 
     &__link {
         text-decoration: none;
         position: relative;
+
+        @include bp.breakpoint( ms ) {
+            // font-size: .9em;
+        }
 
         &--hover {
 
